@@ -79,11 +79,15 @@ document.getElementById('btn-triangle').addEventListener('click',function(){
     const widthTriangle = inputFieldId('width-triangle')
     const heightTriangle = inputFieldId('height-triangle')
     const triangleArea = 0.5 * widthTriangle * heightTriangle;
+    const triangleAreaFixed = triangleArea.toFixed(2);
+
     if(isNaN(triangleArea) === true || widthTriangle<0 || heightTriangle<0 ){
         return alert('ah');
     }
+    setText ('base-triangle',widthTriangle);
+    setText ('length-triangle',heightTriangle);
     serial += 1;
-    displayData(nameTriangle, triangleArea)
+    displayData(nameTriangle, triangleAreaFixed)
 })
 //.2 Rectangle
 document.getElementById('click-vector-rectangle').addEventListener('click',function(){
@@ -112,12 +116,16 @@ document.getElementById('btn-rectangle').addEventListener('click',function(){
     const nameRectangle = document.getElementById('title-rectangle').innerText;
     const widthRectangle= inputFieldId('width-rectangle')
     const heightRectangle = inputFieldId('height-rectangle')
-    const rectangleArea =widthRectangle * heightRectangle;
+    const rectangleArea = widthRectangle * heightRectangle;
+    const rectangleAreaFixed = rectangleArea.toFixed(2);
+
     if(isNaN(rectangleArea) === true || widthRectangle<0 || heightRectangle<0 ){
         return alert('ah');
     }
+    setText ('base-rectangle',widthRectangle);
+    setText ('length-rectangle',heightRectangle);
     serial += 1;
-    displayData(nameRectangle, rectangleArea)
+    displayData(nameRectangle, rectangleAreaFixed)
 })
 //3.Parallelogram
 document.getElementById('click-vector-parallelogram').addEventListener('click',function(){
@@ -146,12 +154,16 @@ document.getElementById('btn-parallelogram').addEventListener('click',function()
     const nameParallelogram = document.getElementById('title-parallelogram').innerText;
     const widthParallelogram= inputFieldId('width-parallelogram')
     const heightParallelogram = inputFieldId('height-parallelogram')
-    const parallelogramArea =widthParallelogram* heightParallelogram;
+    const parallelogramArea = widthParallelogram* heightParallelogram;
+    const parallelogramAreaFixed = parallelogramArea.toFixed(2);
+
     if(isNaN(parallelogramArea) === true || widthParallelogram<0 || heightParallelogram<0 ){
         return alert('ah');
     }
+    setText ('base-parallelogram',widthParallelogram);
+    setText ('length-parallelogram',heightParallelogram);
     serial += 1;
-    displayData(nameParallelogram, parallelogramArea)
+    displayData(nameParallelogram, parallelogramAreaFixed)
 })
 //4.Rhombus
 document.getElementById('click-vector-rhombus').addEventListener('click',function(){
@@ -180,12 +192,15 @@ document.getElementById('btn-rhombus').addEventListener('click',function(){
     const nameRhombus = document.getElementById('title-rhombus').innerText;
     const widthRhombus= inputFieldId('width-rhombus')
     const heightRhombus = inputFieldId('height-rhombus')
-    const rhombusArea =widthRhombus* heightRhombus;
+    const rhombusArea = 0.5 * widthRhombus * heightRhombus;
+    const pentagonAreaFixed = rhombusArea.toFixed(2);
     if(isNaN(rhombusArea) === true || widthRhombus<0 || heightRhombus<0 ){
         return alert('ah');
     }
+    setText ('base-rhombus',widthRhombus);
+    setText ('length-rhombus',heightRhombus);
     serial += 1;
-    displayData(nameRhombus, rhombusArea)
+    displayData(nameRhombus, pentagonAreaFixed)
 })
 //5.Pentagon
 document.getElementById('click-vector-pentagon').addEventListener('click',function(){
@@ -214,12 +229,15 @@ document.getElementById('btn-pentagon').addEventListener('click',function(){
     const namePentagon = document.getElementById('title-pentagon').innerText;
     const widthPentagon= inputFieldId('width-pentagon')
     const heightPentagon = inputFieldId('height-pentagon')
-    const pentagonArea =widthPentagon* heightPentagon;
+    const pentagonArea = 0.5 * widthPentagon * heightPentagon;
+    const pentagonAreaFixed = pentagonArea.toFixed(2);
     if(isNaN(pentagonArea) === true || widthPentagon<0 || heightPentagon<0 ){
         return alert('ah');
     }
+    setText ('base-pentagon',widthPentagon);
+    setText ('length-pentagon',heightPentagon);
     serial += 1;
-    displayData(namePentagon, pentagonArea)
+    displayData(namePentagon, pentagonAreaFixed)
 })
 //6.Ellipse
 document.getElementById('click-vector-ellipse').addEventListener('click',function(){
@@ -248,12 +266,15 @@ document.getElementById('btn-ellipse').addEventListener('click',function(){
     const nameEllipse = document.getElementById('title-ellipse').innerText;
     const widthEllipse= inputFieldId('width-ellipse')
     const heightEllipse = inputFieldId('height-ellipse')
-    const ellipseArea =widthEllipse* heightEllipse;
+    const ellipseArea = 3.14 * widthEllipse * heightEllipse;
+    const ellipseAreaFixed = ellipseArea.toFixed(2); 
     if(isNaN(ellipseArea) === true || widthEllipse<0 || heightEllipse<0 ){
         return alert('ah');
     }
+    setText ('base-ellipse',widthEllipse);
+    setText ('length-ellipse',heightEllipse);
     serial += 1;
-    displayData(nameEllipse, ellipseArea)
+    displayData(nameEllipse, ellipseAreaFixed)
 })
 
 
@@ -266,22 +287,7 @@ function displayData(name, calculate,){
     <td class="p-2">${serial}<span>.</span></td>
     <td class="p-2">${name}</td>
     <td class="p-2">${calculate}<span>cm</span><sup>2</sup></td>
-    <td class="btn-convert"><button class=" btn btn-primary my-3">Convert to m<sup>2</sup></button></td>
+    <td class="p-2"><button class=" btn btn-primary my-3">Convert to m<sup>2</sup></button></td>
     `
     tableBody.appendChild(tr);
 }
-// function getAllData(e) {
-//     console.log(e.target);
-//     // const pName = e.target.parentNode;
-//     // const pName = e.target.parentNode.parentNode.children[0].innerText;
-//     // console.log(pName)
-// }
-// const tableBody = document.getElementById('table-body');
-// getAllData(tableBody)
-// document.getElementsByClassName('btn-convert').addEventListener('click',function(){
-//     console.log('hello')
-//     // const convertToMeterString = document.getElementById('convert-to-meter').innerText;
-//     // const convertToMeter = parseFloat(convertToMeterString);
-//     // const meter = convertToMeter * 2;
-//     // convertToMeterString.innerText = meter;
-// })
