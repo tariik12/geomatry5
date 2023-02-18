@@ -1,5 +1,4 @@
 let serial = 0;
-
 document.getElementById('btn-blog').addEventListener('click',function(){
     document.location.href = 'ques.html';
 })
@@ -55,19 +54,12 @@ function setText (id,newValue){
 document.getElementById('click-vector-triangle').addEventListener('click',function(){
     checkFalse( 'width-triangle');
     checkFalse( 'height-triangle');
-    const baseInnerText = innerTextId('base-triangle')
-    const heightInnerText = innerTextId('length-triangle')
-    if(isNaN(baseInnerText) === true || isNaN(heightInnerText) === true){
-        return alert('ah');
-    }
-    setValue ('width-triangle',baseInnerText);
-    setValue ('height-triangle',heightInnerText);
 })
 document.getElementById('click-check-triangle').addEventListener('click',function(){
     const widthTriangle = inputFieldId('width-triangle')
     const heightTriangle = inputFieldId('height-triangle')
     if(isNaN(widthTriangle) === true || isNaN(heightTriangle) === true || widthTriangle<0 || heightTriangle<0 ){
-        return alert('ah');
+        return alert("Please ! provide valid a input 'Number' ");
     }
     checkTrue( 'width-triangle');
     checkTrue( 'height-triangle');
@@ -82,7 +74,7 @@ document.getElementById('btn-triangle').addEventListener('click',function(){
     const triangleAreaFixed = triangleArea.toFixed(2);
 
     if(isNaN(triangleArea) === true || widthTriangle<0 || heightTriangle<0 ){
-        return alert('ah');
+        return alert("Please ! provide valid a input 'Number' ");
     }
     setText ('base-triangle',widthTriangle);
     setText ('length-triangle',heightTriangle);
@@ -93,19 +85,12 @@ document.getElementById('btn-triangle').addEventListener('click',function(){
 document.getElementById('click-vector-rectangle').addEventListener('click',function(){
     checkFalse( 'width-rectangle');
     checkFalse( 'height-rectangle');
-    const baseInnerText = innerTextId('base-rectangle')
-    const heightInnerText = innerTextId('length-rectangle')
-    if(isNaN(baseInnerText) === true || isNaN(heightInnerText) === true){
-        return alert('ah');
-    }
-    setValue ('width-rectangle',baseInnerText);
-    setValue ('height-rectangle',heightInnerText);
 })
 document.getElementById('click-check-rectangle').addEventListener('click',function(){
     const widthRectangle = inputFieldId('width-rectangle')
     const heightRectangle = inputFieldId('height-rectangle')
     if(isNaN(widthRectangle) === true || isNaN(heightRectangle) === true || widthRectangle<0 || heightRectangle<0 ){
-        return alert('ah');
+        return alert("Please ! provide valid a input 'Number' ");
     }
     checkTrue( 'width-rectangle');
     checkTrue( 'height-rectangle');
@@ -120,7 +105,7 @@ document.getElementById('btn-rectangle').addEventListener('click',function(){
     const rectangleAreaFixed = rectangleArea.toFixed(2);
 
     if(isNaN(rectangleArea) === true || widthRectangle<0 || heightRectangle<0 ){
-        return alert('ah');
+        return alert("Please ! provide valid a input 'Number' ");
     }
     setText ('base-rectangle',widthRectangle);
     setText ('length-rectangle',heightRectangle);
@@ -131,19 +116,12 @@ document.getElementById('btn-rectangle').addEventListener('click',function(){
 document.getElementById('click-vector-parallelogram').addEventListener('click',function(){
     checkFalse( 'width-parallelogram');
     checkFalse( 'height-parallelogram');
-    const baseInnerText = innerTextId('base-parallelogram')
-    const heightInnerText = innerTextId('length-parallelogram')
-    if(isNaN(baseInnerText) === true || isNaN(heightInnerText) === true){
-        return alert('ah');
-    }
-    setValue ('width-parallelogram',baseInnerText);
-    setValue ('height-parallelogram',heightInnerText);
 })
 document.getElementById('click-check-parallelogram').addEventListener('click',function(){
     const widthParallelogram = inputFieldId('width-parallelogram')
     const heightParallelogram = inputFieldId('height-parallelogram')
     if(isNaN(widthParallelogram) === true || isNaN(heightParallelogram) === true || widthParallelogram<0 || heightParallelogram<0 ){
-        return alert('ah');
+        return alert("Please ! provide valid a input 'Number' ");
     }
     checkTrue( 'width-parallelogram');
     checkTrue( 'height-parallelogram');
@@ -158,7 +136,7 @@ document.getElementById('btn-parallelogram').addEventListener('click',function()
     const parallelogramAreaFixed = parallelogramArea.toFixed(2);
 
     if(isNaN(parallelogramArea) === true || widthParallelogram<0 || heightParallelogram<0 ){
-        return alert('ah');
+        return alert("Please ! provide valid a input 'Number' ");
     }
     setText ('base-parallelogram',widthParallelogram);
     setText ('length-parallelogram',heightParallelogram);
@@ -169,19 +147,12 @@ document.getElementById('btn-parallelogram').addEventListener('click',function()
 document.getElementById('click-vector-rhombus').addEventListener('click',function(){
     checkFalse( 'width-rhombus');
     checkFalse( 'height-rhombus');
-    const baseInnerText = innerTextId('base-rhombus')
-    const heightInnerText = innerTextId('length-rhombus')
-    if(isNaN(baseInnerText) === true || isNaN(heightInnerText) === true){
-        return alert('ah');
-    }
-    setValue ('width-rhombus',baseInnerText);
-    setValue ('height-rhombus',heightInnerText);
 })
 document.getElementById('click-check-rhombus').addEventListener('click',function(){
     const widthRhombus = inputFieldId('width-rhombus')
     const heightRhombus = inputFieldId('height-rhombus')
     if(isNaN(widthRhombus) === true || isNaN(heightRhombus) === true || widthRhombus<0 || heightRhombus<0 ){
-        return alert('ah');
+        return alert("Please ! provide valid a input 'Number' ");
     }
     checkTrue( 'width-rhombus');
     checkTrue( 'height-rhombus');
@@ -195,7 +166,7 @@ document.getElementById('btn-rhombus').addEventListener('click',function(){
     const rhombusArea = 0.5 * widthRhombus * heightRhombus;
     const pentagonAreaFixed = rhombusArea.toFixed(2);
     if(isNaN(rhombusArea) === true || widthRhombus<0 || heightRhombus<0 ){
-        return alert('ah');
+        return alert("Please ! provide valid a input 'Number' ");
     }
     setText ('base-rhombus',widthRhombus);
     setText ('length-rhombus',heightRhombus);
@@ -206,19 +177,12 @@ document.getElementById('btn-rhombus').addEventListener('click',function(){
 document.getElementById('click-vector-pentagon').addEventListener('click',function(){
     checkFalse( 'width-pentagon');
     checkFalse( 'height-pentagon');
-    const baseInnerText = innerTextId('base-pentagon')
-    const heightInnerText = innerTextId('length-pentagon')
-    if(isNaN(baseInnerText) === true || isNaN(heightInnerText) === true){
-        return alert('ah');
-    }
-    setValue ('width-pentagon',baseInnerText);
-    setValue ('height-pentagon',heightInnerText);
 })
 document.getElementById('click-check-pentagon').addEventListener('click',function(){
     const widthPentagon = inputFieldId('width-pentagon')
     const heightPentagon = inputFieldId('height-pentagon')
     if(isNaN(widthPentagon) === true || isNaN(heightPentagon) === true || widthPentagon<0 || heightPentagon<0 ){
-        return alert('ah');
+        return alert("Please ! provide valid a input 'Number' ");
     }
     checkTrue( 'width-pentagon');
     checkTrue( 'height-pentagon');
@@ -232,7 +196,7 @@ document.getElementById('btn-pentagon').addEventListener('click',function(){
     const pentagonArea = 0.5 * widthPentagon * heightPentagon;
     const pentagonAreaFixed = pentagonArea.toFixed(2);
     if(isNaN(pentagonArea) === true || widthPentagon<0 || heightPentagon<0 ){
-        return alert('ah');
+        return alert("Please ! provide valid a input 'Number' ");
     }
     setText ('base-pentagon',widthPentagon);
     setText ('length-pentagon',heightPentagon);
@@ -243,19 +207,12 @@ document.getElementById('btn-pentagon').addEventListener('click',function(){
 document.getElementById('click-vector-ellipse').addEventListener('click',function(){
     checkFalse( 'width-ellipse');
     checkFalse( 'height-ellipse');
-    const baseInnerText = innerTextId('base-ellipse')
-    const heightInnerText = innerTextId('length-ellipse')
-    if(isNaN(baseInnerText) === true || isNaN(heightInnerText) === true){
-        return alert('ah');
-    }
-    setValue ('width-ellipse',baseInnerText);
-    setValue ('height-ellipse',heightInnerText);
 })
 document.getElementById('click-check-ellipse').addEventListener('click',function(){
     const widthEllipse = inputFieldId('width-ellipse')
     const heightEllipse = inputFieldId('height-ellipse')
     if(isNaN(widthEllipse) === true || isNaN(heightEllipse) === true || widthEllipse<0 || heightEllipse<0 ){
-        return alert('ah');
+        return alert("Please ! provide valid a input 'Number' ");
     }
     checkTrue( 'width-ellipse');
     checkTrue( 'height-ellipse');
@@ -269,25 +226,22 @@ document.getElementById('btn-ellipse').addEventListener('click',function(){
     const ellipseArea = 3.14 * widthEllipse * heightEllipse;
     const ellipseAreaFixed = ellipseArea.toFixed(2); 
     if(isNaN(ellipseArea) === true || widthEllipse<0 || heightEllipse<0 ){
-        return alert('ah');
+        return alert("Please ! provide valid a input 'Number' ");
     }
     setText ('base-ellipse',widthEllipse);
     setText ('length-ellipse',heightEllipse);
     serial += 1;
     displayData(nameEllipse, ellipseAreaFixed)
 })
-
-
-
-
+//displayData
 function displayData(name, calculate,){
     const tableBody = document.getElementById('table-body');
     const tr = document.createElement('tr');
     tr.innerHTML = `
-    <td class="p-2">${serial}<span>.</span></td>
-    <td class="p-2">${name}</td>
-    <td class="p-2">${calculate}<span>cm</span><sup>2</sup></td>
-    <td class="p-2"><button class=" btn btn-primary my-3">Convert to m<sup>2</sup></button></td>
+    <td class="ps-1">${serial}<span>.</span></td>
+    <td class="ps-1">${name}</td>
+    <td class="ps-1">${calculate}<span>cm</span><sup>2</sup></td>
+    <td class="ps-1"><button class=" btn btn-primary my-3">Convert to m<sup>2</sup></button></td>
     `
     tableBody.appendChild(tr);
 }

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment</title>
-    <!-- awesome -->
+<!-- awesome -->
     <script src="https://kit.fontawesome.com/53eea719f2.js" crossorigin="anonymous"></script>
 <!-- bootstrap-link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="./index.css">
 </head>
 <body class="container">
+<!--  -->
     <header>
       <nav class=" navbar bg-body-tertiary my-4 rounded">
         <form class="container-fluid justify-content-between">
@@ -29,7 +30,7 @@
     </header>
     <main  id="baf">
       <div class="my-5  row  ">
-        <div class="col-md-8  ">
+        <div class="col-md-9  ">
           <div class="row row-cols-1 row-cols-md-3   ">
 <!--1.Triangle -->
             <div class="col">
@@ -39,20 +40,32 @@
                   <h5 id="title-triangle" class="card-title">Triangle</h5>
                   <p class="card-text">Area (A) = 0.5 &times; b &times; h </p>
                   <p>b = <span id="base-triangle">10</span> cm, h = <span id="length-triangle">4</span> cm <img id="click-vector-triangle" src="./images/vector.png" alt=""></p>
-                  <p><input id="width-triangle" class="w-25 py-2 rounded " type="text" disabled> cm <input id="height-triangle" class="w-25 py-2  rounded " type="text " disabled> cm <button id="click-check-triangle" class="btn btn-primary" ><i class="fa-solid fa-check   "></i></button> </p>
+                  <div class="d-flex justify-content-between align-items-center py-2 ">
+                    <p style="position:relative;top: 5px;">cm</p>
+                    <input id="width-triangle" class=" rounded py-1 w-25" type="text" placeholder="base" disabled>
+                    <p style="position:relative;top: 5px;">cm</p>
+                    <input id="height-triangle" class=" py-1  w-25  rounded " type="text " placeholder="length" disabled>
+                    <button id="click-check-triangle" class="btn btn-primary" ><i class="fa-solid fa-check   "></i></button>
+                   </div>
                   <button id="btn-triangle"  class="btn btn-primary w-100">calculate</button>
                 </div>
               </div>
             </div>
 <!--2.Rectangle -->
             <div class="col">
-              <div class="card h-100 p-2 bg-color">
+              <div class="card h-100 p-2 bg-color ">
                 <img src="./images/rectangle.png" class="h-100 p-5" alt="...">
                 <div class="card-body text-center">
                   <h5 id="title-rectangle" class="card-title">Rectangle</h5>
                   <p class="card-text">Area (A) = w &times; l</p>
                   <p>w = <span id="base-rectangle">10</span>cm, l = <span id="length-rectangle">4</span> cm <img id="click-vector-rectangle" src="./images/vector.png" alt=""></p>
-                  <p><input id="width-rectangle" class="w-25 py-2 rounded " type="text" disabled> cm <input id="height-rectangle" class="w-25 py-2  rounded " type="text " disabled> cm <button id="click-check-rectangle" class="btn btn-primary" ><i class="fa-solid fa-check   "></i></button></p>
+                 <div class="d-flex justify-content-between align-items-center py-2 ">
+                  <p style="position:relative;top: 5px;">cm</p>
+                  <input id="width-rectangle" class=" rounded py-1 w-25" type="text" placeholder="base" disabled>
+                  <p style="position:relative;top: 5px;">cm</p>
+                  <input id="height-rectangle" class=" py-1  w-25  rounded " type="text " placeholder="length" disabled>
+                  <button id="click-check-rectangle" class="btn btn-primary" ><i class="fa-solid fa-check   "></i></button>
+                 </div>
                   <button id="btn-rectangle" class="btn btn-primary w-100">calculate</button>
                 </div>
               </div>
@@ -65,7 +78,14 @@
                   <h5 id="title-parallelogram" class="card-title">Parallelogram</h5>
                   <p class="card-text">Area (A) = b &times; h</p>
                   <p>b= <span id="base-parallelogram">10</span>cm, h=<span id="length-parallelogram">12</span>cm <img id="click-vector-parallelogram" src="./images/vector.png" alt=""></p>
-                  <p><input id="width-parallelogram" class="w-25 py-2 rounded " type="text" disabled> cm <input id="height-parallelogram" class="w-25 py-2  rounded " type="text " disabled> cm <button id="click-check-parallelogram" class="btn btn-primary" ><i class="fa-solid fa-check   "></i></button></p>
+                  <div class="d-flex justify-content-between align-items-center py-2 ">
+                    <p style="position:relative;top: 5px;">cm</p>
+                    <input id="width-parallelogram" class=" rounded py-1 w-25" type="text" placeholder="base" disabled>
+                    <p style="position:relative;top: 5px;">cm</p>
+                    <input id="height-parallelogram" class=" py-1  w-25  rounded " type="text " placeholder="length" disabled>
+                    <button id="click-check-parallelogram" class="btn btn-primary" ><i class="fa-solid fa-check   "></i></button>
+                   </div>
+                  
                   <button id="btn-parallelogram" class="btn btn-primary w-100">calculate</button>
                 </div>
               </div>
@@ -78,7 +98,13 @@
                   <h5 id="title-rhombus"class="card-title">Rhombus</h5>
                   <p class="card-text">Area (A) = 0.5 &times; d<sub>1</sub> &times; d<sub>2</sub> </p>
                   <p>d<sub>1</sub> = <span id="base-rhombus">16</span>cm d<sub>2</sub> = <span id="length-rhombus">12</span>cm <img id="click-vector-rhombus" src="./images/vector.png" alt=""></p>
-                  <p><input id="width-rhombus" class="w-25 py-2 rounded " type="text" disabled> cm <input id="height-rhombus" class="w-25 py-2  rounded " type="text " disabled> cm <button id="click-check-rhombus" class="btn btn-primary" ><i class="fa-solid fa-check   "></i></button></p>
+                  <div class="d-flex justify-content-between align-items-center py-2 ">
+                    <p style="position:relative;top: 5px;">cm</p>
+                    <input id="width-rhombus" class=" rounded py-1 w-25" type="text" placeholder="base" disabled>
+                    <p style="position:relative;top: 5px;">cm</p>
+                    <input id="height-rhombus" class=" py-1  w-25  rounded " type="text " placeholder="length" disabled>
+                    <button id="click-check-rhombus" class="btn btn-primary" ><i class="fa-solid fa-check   "></i></button>
+                   </div>
                   <button id="btn-rhombus" class="btn btn-primary w-100">calculate</button>
                 </div>
               </div>
@@ -91,7 +117,13 @@
                   <h5 id="title-pentagon"class="card-title">Pentagon</h5>
                   <p class="card-text">Area (A) = 0.5 &times; p &times; b </p>
                   <p>p =<span id="base-pentagon">6</span>cm, b =<span id="length-pentagon">10</span>cm <img id="click-vector-pentagon" src="./images/vector.png" alt=""></p>
-                  <p><input id="width-pentagon" class="w-25 py-2 rounded " type="text" disabled> cm <input id="height-pentagon" class="w-25 py-2  rounded " type="text " disabled> cm <button id="click-check-pentagon" class="btn btn-primary" ><i class="fa-solid fa-check   "></i></button></p>
+                  <div class="d-flex justify-content-between align-items-center py-2 ">
+                    <p style="position:relative;top: 5px;">cm</p>
+                    <input id="width-pentagon" class=" rounded py-1 w-25" type="text" placeholder="base" disabled>
+                    <p style="position:relative;top: 5px;">cm</p>
+                    <input id="height-pentagon" class=" py-1  w-25  rounded " type="text " placeholder="length" disabled>
+                    <button id="click-check-pentagon" class="btn btn-primary" ><i class="fa-solid fa-check   "></i></button>
+                   </div>
                   <button id="btn-pentagon" class="btn btn-primary w-100">calculate</button>
                 </div>
               </div>
@@ -104,15 +136,21 @@
                   <h5 id="title-ellipse" class="card-title">Ellipse</h5>
                   <p class="card-text">Area (A) = &pi; ab </p>
                   <p>a = <span id="base-ellipse">10</span>cm, b =<span id="length-ellipse">4</span>cm <img id="click-vector-ellipse" src="./images/vector.png" alt=""></p>
-                  <p><input id="width-ellipse" class="w-25 py-2 rounded " type="text" disabled> cm <input id="height-ellipse" class="w-25 py-2  rounded " type="text " disabled> cm <button id="click-check-ellipse" class="btn btn-primary" ><i class="fa-solid fa-check   "></i></button></p>
+                  <div class="d-flex justify-content-between align-items-center py-2 ">
+                    <p style="position:relative;top: 5px;">cm</p>
+                    <input id="width-ellipse" class=" rounded py-1 w-25" type="text" placeholder="base" disabled>
+                    <p style="position:relative;top: 5px;">cm</p>
+                    <input id="height-ellipse" class=" py-1  w-25  rounded " type="text " placeholder="length" disabled>
+                    <button id="click-check-ellipse" class="btn btn-primary" ><i class="fa-solid fa-check   "></i></button>
+                   </div>
                   <button id="btn-ellipse" class="btn btn-primary w-100">calculate</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4 card h-100  p-2">
-      <div class="w-100">
+        <div class="col-md-3 card h-100  p-2">
+      <div class="" style="min-height: 18rem";>
         <h6 class="text-center text-decoration-underline  h-25">Area Calculation</h6>
         <table class="tabl align-middle ">
           <thead>
