@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <!-- awesome -->
+    <script src="https://kit.fontawesome.com/53eea719f2.js" crossorigin="anonymous"></script>
+<!-- bootstrap-link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- css -->
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body class="container">
+    <header>
+      <nav class=" navbar bg-body-tertiary my-4 rounded">
+        <form class="container-fluid justify-content-between">
+          <div class="">
+            <a class="navbar-brand fs-4 fw-bold" href="#">Interactive</a><br>
+            <a class="navbar-brand" href="#">Geometry Genius</a>
+          </div>
+          <button id="btn-blog" class="btn btn-primary px-4" type="button" >Blog</button>
+        </form>
+      </nav>
+    </header>
+    <main >
+      <div class="my-5  row  ">
+        <div class="col-md-9 ">
+          <div class="row row-cols-1 row-cols-md-3 g-4  ">
+<!--1.Triangle -->
+            <div class="col">
+              <div class="card h-100 p-2">
+                <img src="./images/triangle.png" class="h-100 p-5" alt="...">
+                <div class="card-body text-center">
+                  <h5 id="title-triangle" class="card-title">Triangle</h5>
+                  <p class="card-text">Area (A) = 0.5 &times; b &times; h </p>
+                  <p>b = <span id="b">10</span> cm, h = <span id="h">4</span> cm <img id="a" src="./images/vector.png" alt=""></p>
+                  <p><input id="width-triangle" class="w-25 py-2 rounded " type="text" disabled> cm <input id="height-triangle" class="w-25 py-2  rounded " type="text " disabled> cm <button id="check" class="btn btn-primary" ><i class="fa-solid fa-check   "></i></button> </p>
+                  <button id="btn-triangle"  class="btn btn-primary w-100">calculate</button>
+                </div>
+              </div>
+            </div>
+<!--2.Rectangle -->
+            <div class="col">
+              <div class="card h-100 p-2">
+                <img src="./images/rectangle.png" class="h-100 p-5" alt="...">
+                <div class="card-body text-center">
+                  <h5 id="name-rectangle" class="card-title">Rectangle</h5>
+                  <p class="card-text">Area (A) = w &times; l</p>
+                  <p>w = 10cm, l = 4cm</p>
+                  <p><input id="width-rectangle" class="w-25 py-2 rounded " type="text"> cm <input id="height-rectangle" class="w-25 py-2  rounded " type="text "> cm </p>
+                  <button id="btn-rectangle" class="btn btn-primary w-100">calculate</button>
+                </div>
+              </div>
+            </div>
+<!--3.Parallelogram -->           
+            <div class="col">
+              <div class="card h-100 p-2">
+                <img src="./images/parallelogram.png" class="h-100 p-5" alt="...">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Parallelogram</h5>
+                  <p class="card-text">Area (A) = b &times; h</p>
+                  <p>b=10cm, h=12cm</p>
+                  <p><input id="width-parallelogram" class="w-25 py-2 rounded " type="text"> cm <input id="height-parallelogram" class="w-25 py-2  rounded " type="text "> cm </p>
+                  <button id="btn-parallelogram" class="btn btn-primary w-100">calculate</button>
+                </div>
+              </div>
+            </div>
+<!--4.Rhombus -->
+            <div class="col">
+              <div class="card h-100 p-2">
+                <img src="./images/rhombus.png" class="h-100 p-5" alt="...">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Rhombus</h5>
+                  <p class="card-text">Area (A) = 0.5 &times; d<sub>1</sub> &times; d<sub>2</sub> </p>
+                  <p>d<sub>1</sub> = 16cm d<sub>2</sub> = 8cm</p>
+                  <p><input id="width-rhombus" class="w-25 py-2 rounded " type="text"> cm <input id="height-rhombus" class="w-25 py-2  rounded " type="text "> cm </p>
+                  <button id="btn-rhombus" class="btn btn-primary w-100">calculate</button>
+                </div>
+              </div>
+            </div>
+<!--5.Pentagon -->
+            <div class="col">
+              <div class="card h-100 p-2">
+                <img src="./images/pentagon.png " class="h-100  p-5" alt="...">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Pentagon</h5>
+                  <p class="card-text">Area (A) = 0.5 &times; p &times; b </p>
+                  <p>p = 6cm, b = 10cm</p>
+                  <p><input id="width-pentagon" class="w-25 py-2 rounded " type="text"> cm <input id="height-pentagon" class="w-25 py-2  rounded " type="text "> cm </p>
+                  <button id="btn-pentagon" class="btn btn-primary w-100">calculate</button>
+                </div>
+              </div>
+            </div>
+<!--6.Ellipse -->
+            <div class="col">
+              <div class="card h-100 p-2">
+                <img src="./images/ellipse.png" class="h-100 p-5" alt="...">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Ellipse</h5>
+                  <p class="card-text">Area (A) = &pi; ab </p>
+                  <p>a = 10cm, b = 4cm</p>
+                  <p><input id="width-ellipse" class="w-25 py-2 rounded " type="text"> cm <input id="height-ellipse" class="w-25 py-2  rounded " type="text "> cm </p>
+                  <button id="btn-ellipse" class="btn btn-primary w-100">calculate</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 ">
+          <table class="tabl align-middle caption-top ">
+            <caption class="" >List of users</caption>
+            <thead>
+            </thead>
+            <tbody id="table-body">
+              <!-- <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr> -->
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+    <footer>
+
+    </footer>
+
+
+
+<!-- bootstrap-js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
