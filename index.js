@@ -1,5 +1,9 @@
 let serial = 0;
 
+document.getElementById('btn-blog').addEventListener('click',function(){
+    document.location.href = 'ques.html';
+})
+
 // Random-background:
 const allCard = document.querySelectorAll('.bg-color');
 for (const card of allCard) {
