@@ -1,5 +1,6 @@
 let serial = 0;
 
+// Random-background:
 const allCard = document.querySelectorAll('.bg-color');
 for (const card of allCard) {
   card.addEventListener('mouseenter', () => {
@@ -10,15 +11,17 @@ for (const card of allCard) {
     });
   });
 }
+//for button disable
 function checkTrue( idCheck){
-    const b = document.getElementById(idCheck);
-    b.disabled = true;
+    const checkTr = document.getElementById(idCheck);
+    checkTr.disabled = true;
 }
+//for button remove disable
 function checkFalse( idCheck){
-    const b = document.getElementById(idCheck);
-    b.disabled = false;
+    const checkFa = document.getElementById(idCheck);
+    checkFa.disabled = false;
 }
-
+//for input value parseFloat
 function inputFieldId (inputId){
     const depositFieldInput = document.getElementById(inputId);
     const depositFieldInputString = depositFieldInput.value;
@@ -26,6 +29,7 @@ function inputFieldId (inputId){
     depositFieldInput.value = '';
     return depositField; 
 }
+//for innerText parseFloat
 function innerTextId (innerTextId){
     const depositFieldInput = document.getElementById(innerTextId);
     const depositFieldInputString = depositFieldInput.innerText;
@@ -33,28 +37,29 @@ function innerTextId (innerTextId){
     depositFieldInput.innerText = '';
     return depositField; 
 }
+//for input set value 
 function setValue (id,newValue){
     const widthTriangle =document.getElementById(id);
     widthTriangle.value = newValue;  
-    console.log(newValue)
 }
+//for input set text
 function setText (id,newValue){
     const widthTriangle =document.getElementById(id);
     widthTriangle.innerText = newValue;  
-    console.log(newValue)
 }
-document.getElementById('a').addEventListener('click',function(){
+//1. triangle
+document.getElementById('click-vector').addEventListener('click',function(){
     checkFalse( 'width-triangle');
     checkFalse( 'height-triangle');
-    const bInnerText = innerTextId('b')
-    const hInnerText = innerTextId('h')
+    const bInnerText = innerTextId('base-triangle')
+    const hInnerText = innerTextId('length-triangle')
     if(isNaN(bInnerText) === true || isNaN(hInnerText) === true){
         return alert('ah');
     }
     setValue ('width-triangle',bInnerText);
     setValue ('height-triangle',hInnerText);
 })
-document.getElementById('check').addEventListener('click',function(){
+document.getElementById('click-check').addEventListener('click',function(){
     const widthTriangle = inputFieldId('width-triangle')
     const heightTriangle = inputFieldId('height-triangle')
     if(isNaN(widthTriangle) === true || isNaN(heightTriangle) === true || widthTriangle<0 || heightTriangle<0 ){
@@ -62,11 +67,8 @@ document.getElementById('check').addEventListener('click',function(){
     }
     checkTrue( 'width-triangle');
     checkTrue( 'height-triangle');
-    setText ('b',widthTriangle);
-    setText ('h',heightTriangle);
-})
-document.getElementById('convert-to-meter').addEventListener('click',function(){
-    
+    setText ('base-triangle',widthTriangle);
+    setText ('length-triangle',heightTriangle);
 })
 document.getElementById('btn-triangle').addEventListener('click',function(){
     const nameTriangle = document.getElementById('title-triangle').innerText;
@@ -80,112 +82,34 @@ document.getElementById('btn-triangle').addEventListener('click',function(){
     displayData(nameTriangle, triangleArea)
 })
 
-
-
-
-
-// document.getElementById('check').addEventListener('click',function(){
-//     const widthTriangle = inputFieldId('width-triangle')
-//     const heightTriangle = inputFieldId('height-triangle')
-//     if(isNaN(widthTriangle) === true || isNaN(heightTriangle) === true || widthTriangle<0 || heightTriangle<0 ){
-//         return alert('ah');
-//     }
-//     const b = document.getElementById('width-triangle');
-//     b.disabled = true;
-//     const h = document.getElementById('height-triangle');
-//     h.disabled = true;
-//     setText ('width-triangle',bInnerText);
-//     setText ('height-triangle',hInnerText);
-//     const bInnerText =document.getElementById('b');
-//     bInnerText.innerText = widthTriangle;  
-//     const hInnerText = document.getElementById('h');
-//     hInnerText.innerText = heightTriangle;  
-// })
-
-// document.getElementById('a').addEventListener('click',function(){
-//     // const b = document.getElementById();
-//     // b.disabled = false;
-//      check( 'width-triangle');
-//      check( 'height-triangle');
-//     // const h = document.getElementById();
-//     // h.disabled = false;
-//     const bInnerText = innerTextId('b')
-//     const hInnerText = innerTextId('h')
-//     if(isNaN(bInnerText) === true || isNaN(hInnerText) === true){
-//         return alert('ah');
-//     }
-//     setValue ('width-triangle',bInnerText);
-//     setValue ('height-triangle',hInnerText);
-// })
-
-
-// document.getElementById('check').addEventListener('click',function(){
-//     const widthTriangle = inputFieldId('width-triangle')
-//     const heightTriangle = inputFieldId('height-triangle')
-//     if(isNaN(widthTriangle) === true || isNaN(heightTriangle) === true || widthTriangle<0 || heightTriangle<0 ){
-//         return alert('ah');
-//     }
-//     // const b = document.getElementById('width-triangle');
-//     // b.disabled = true;
-//     // const h = document.getElementById('height-triangle');
-//     // h.disabled = true;
-//     checkTrue( 'width-triangle');
-//     checkTrue( 'height-triangle');
-//     setText ('b',widthTriangle);
-//     setText ('h',heightTriangle);
-// })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-document.getElementById('btn-rectangle').addEventListener('click',function(){
-    const nameTriangle = document.getElementById('name-rectangle').innerText;
-    const wRectangle = forInputValue('w-rectangle')
-    const iRectangle = forInputValue('i-rectangle')
-    const triangleArea = wRectangle * iRectangle;
-    serial += 1;
-    displayData(nameTriangle, triangleArea)
-})
-
-
-
 function displayData(name, calculate,){
     const tableBody = document.getElementById('table-body');
     const tr = document.createElement('tr');
     tr.innerHTML = `
     <td>${serial}<span>.</span></td>
     <td>${name}</td>
-    <td>${calculate}</td>
-    <td><button id="convert-to-meter" class ='btn-primary'>Convert to m<sum>2</sum></button></td>
+    <td id ="convert-to-meter">${calculate}</td>
+    <td class="btn-convert"><button>Convert to m<sum>2</sum></button></td>
     `
     tableBody.appendChild(tr);
 }
+
+
+
+
+
+// function getAllData(e) {
+//     console.log(e.target);
+//     // const pName = e.target.parentNode;
+//     // const pName = e.target.parentNode.parentNode.children[0].innerText;
+//     // console.log(pName)
+// }
+// const tableBody = document.getElementById('table-body');
+// getAllData(tableBody)
+// document.getElementsByClassName('btn-convert').addEventListener('click',function(){
+//     console.log('hello')
+//     // const convertToMeterString = document.getElementById('convert-to-meter').innerText;
+//     // const convertToMeter = parseFloat(convertToMeterString);
+//     // const meter = convertToMeter * 2;
+//     // convertToMeterString.innerText = meter;
+// })
