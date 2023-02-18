@@ -259,10 +259,10 @@ function displayData(name, calculate,){
     const tableBody = document.getElementById('table-body');
     const tr = document.createElement('tr');
     tr.innerHTML = `
-    <td>${serial}<span>.</span></td>
-    <td>${name}</td>
-    <td id ="convert-to-meter">${calculate}</td>
-    <td class="btn-convert"><button>Convert to m<sum>2</sum></button></td>
+    <td class="p-2">${serial}<span>.</span></td>
+    <td class="p-2">${name}</td>
+    <td class="p-2">${calculate}<span>cm</span><sup>2</sup></td>
+    <td class="btn-convert"><button class=" btn btn-primary my-3">Convert to m<sup>2</sup></button></td>
     `
     tableBody.appendChild(tr);
 }
