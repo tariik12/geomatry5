@@ -2,7 +2,6 @@ let serial = 0;
 document.getElementById('btn-blog').addEventListener('click',function(){
     document.location.href = 'ques.html';
 })
-
 // Random-background:
 const allCard = document.querySelectorAll('.bg-color');
 for (const card of allCard) {
@@ -72,7 +71,6 @@ document.getElementById('btn-triangle').addEventListener('click',function(){
     const heightTriangle = inputFieldId('height-triangle')
     const triangleArea = 0.5 * widthTriangle * heightTriangle;
     const triangleAreaFixed = triangleArea.toFixed(2);
-
     if(isNaN(triangleArea) === true || widthTriangle<0 || heightTriangle<0 ){
         return alert("Please ! provide valid a input 'Number' ");
     }
